@@ -1,19 +1,22 @@
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
-int n,num,rem,reverse=0;
-printf("enter the 
-num=n;num:,n);
-scanf("%d",&n);
-while(n!=0)
-{
-rem=num%10;
-n=n/10;
-reverse=reverse*10+rem;
-}
-if(num==reverse
-printf("%d yes",num);
-else
-printf("%d no",num);
-return 0;
+    int n, reversedInt = 0, remainder, originalInt;
+ 
+    printf("Enter an integer: ");
+    scanf("%d", &n);
+ 
+    originalInt = n;
+    while( n!=0 )
+    {
+        remainder = n%10;
+        reversedInt = reversedInt*10 + remainder;
+        n /= 10;
+    }
+    if (originalInt == reversedInt)
+        printf("%d yes", originalInt);
+    else
+        printf("%d no", originalInt);
+ 
+    return 0;
 }
